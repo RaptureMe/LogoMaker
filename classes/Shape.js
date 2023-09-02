@@ -24,6 +24,10 @@ class Triangle extends Shape {
     }
 }
 
-const testTriangle = new Triangle("blue")
-console.log(testTriangle)
-console.log(testTriangle.render())
+module.exports = {
+    Shape, Circle, Triangle, Square
+}
+
+// const testTriangle = new Triangle("blue")
+// console.log(testTriangle)
+// console.log(testTriangle.render())

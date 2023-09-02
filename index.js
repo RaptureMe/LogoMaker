@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const Text = require('./classes/Text');
+const {Circle, Triangle, Square} = require('./classes/Shape');
+const Svg = require('./classes/Svg');
 
 inquirer.prompt([
     {
