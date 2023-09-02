@@ -2,8 +2,6 @@ class Shape {
     constructor(shapeColor) {
         this.shapeColor = shapeColor;
     }
-
-
 }
 
 class Circle extends Shape {
