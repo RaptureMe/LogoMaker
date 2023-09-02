@@ -27,7 +27,22 @@ inquirer.prompt([
     },
     //Takes the data and writes into README.md
   ]).then((data) => {
-    console.log(new Text(data.logoCharacters, data.textColor).render())
+    // console.log(new Text(data.logoCharacters, data.textColor).render())
+    const userText = new Text(data.logoCharacters,data.textColor)
+    let userShape;
+    switch(data.shape){
+        case 'Circle':
+            userShape = new Circle(data.shapeColor);
+            break;
+        case 'Square':
+            userShape = new Square(data.shapeColor);
+            break;
+        case 'Triangle':
+            userShape = new Triangle(data.shapeColor);
+            break;
+    };
+    const svgGen = new Svg(userText,userShape)
+    
     // fs.writeFile('README.md', generateReadme(data), (err) =>
     //   err ? console.log(err) : console.log('Generated logo.svg')
     // );
