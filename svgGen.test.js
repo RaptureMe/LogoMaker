@@ -1,7 +1,6 @@
 const Text = require('./classes/Text');
 const { Shape, Circle, Triangle, Square } = require('./classes/Shape');
 const Svg = require('./classes/Svg');
-const { describe } = require('yargs');
 
 describe('Testing shapes', () => {
     test('Test Shape.js', () => {
@@ -25,6 +24,18 @@ describe('Testing shapes', () => {
     })
 })
 
-describe('Test Text', ()+> {
-    test('')
+describe('Test Text', () => {
+    test('Test Logo Characters', ()=>{
+        const testLogoChar = new Text('123')
+        expect(testLogoChar.logoCharacters).toBe('123')
+    })
+    test('Test Text Color', ()=>{
+        const testLogoColor = new Text('','Blue')
+        expect(testLogoColor.textColor).toBe('Blue')
+    })
+    test('Test Render', ()=> {
+        const testText = new Text('123','Black')
+        const expectedString = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="Black">123</text>`
+        expect(testText.render()).toBe(expectedString)
+    })
 })

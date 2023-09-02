@@ -1,6 +1,3 @@
-const { networkInterfaces } = require("os");
-const { text } = require("stream/consumers");
-
 class Text {
     constructor(logoCharacters,textColor){
         this.logoCharacters = logoCharacters;
